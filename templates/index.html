@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif&family=Nunito&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+
+    <title>Responsive Job Portal Website</title>
+  </head>
+  <body>
+    <nav class="navbar">
+      <h2 class="navbar-logo"><a href="#">JOBDOOR</a></h2>
+      <div class="navbar-menu">
+        <a href="#jobs">Jobs</a>
+        <a href="#companies">Companies</a>
+        <a href="#testimoni">Testimonil</a>
+        <a href="#blog">Blog</a>
+        <a href="#">Sign In</a>
+      </div>
+      <div class="menu-toggle">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </nav>
+
+    <header>
+      <h1 class="header-title">
+        FIND YOUR <br />
+        <span>PERFECT JOB</span> <br />
+        EASILY
+      </h1>
+    </header>
+
+    <div class="search-wrapper">
+      <div class="search-box">
+        <div class="search-card">
+          <input class="search-input" type="text" placeholder="Job title" />
+          <button class="search-button">Search</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="filter-box">
+      <div class="filter-dropdown">
+        <select name="job-level" id="job-level" class="filter-select">
+          <option value="">Job Level</option>
+          <option value="">Entry</option>
+          <option value="">Mid-Senior</option>
+          <option value="">Director</option>
+        </select>
+        <select name="job-function" id="job-function" class="filter-select">
+          <option value="">Job Function</option>
+          <option value="">IT</option>
+          <option value="">Management</option>
+          <option value="">Education</option>
+        </select>
+        <select name="employment" id="employment" class="filter-select">
+          <option value="">Employment Type</option>
+          <option value="">Internship</option>
+          <option value="">Part Time</option>
+          <option value="">Full Time</option>
+        </select>
+        <select name="location" id="location" class="filter-select">
+          <option value="">Location</option>
+          <option value="">Remote</option>
+          <option value="">US</option>
+          <option value="">UK</option>
+        </select>
+        <select name="education" id="education" class="filter-select">
+          <option value="">Education</option>
+          <option value="">High School</option>
+          <option value="">Bachelor's degree</option>
+          <option value="">Master's degree</option>
+        </select>
+      </div>
+      <div class="filter-chosen">
+        <div class="chosen-card">
+          Remote <i class="fas fa-times-circle"></i>
+        </div>
+        <div class="chosen-card">
+          Full time <i class="fas fa-times-circle"></i>
+        </div>
+        <div class="chosen-card">
+          Financial Tech <i class="fas fa-times-circle"></i>
+        </div>
+        <div class="chosen-card">
+          Entry Level <i class="fas fa-times-circle"></i>
+        </div>
+      </div>
+    </div>
+
+    <section class="job-list" id="jobs">
+      <div class="job-card">
+        <div class="job-name">
+          <img class="job-profile" src="{{ url_for('static', filename='/images/tesla.svg') }}" alt="" />
+          <div class="job-detail">
+            <h4>Tesla</h4>
+            <h3>Mechanical Engineer</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          </div>
+        </div>
+        <div class="job-label">
+          <a class="label-a" href="#">HTML</a>
+          <a class="label-b" href="#">CSS</a>
+          <a class="label-c" href="#">JavaScript</a>
+        </div>
+        <div class="job-posted">Posted 6 mins ago</div>
+      </div>
+
+      <div class="job-card">
+        <div class="job-name">
+          <img class="job-profile" src="{{ url_for('static', filename='/images/ebay.svg') }}" alt="" />
+          <div class="job-detail">
+            <h4>Ebay</h4>
+            <h3>Business Development</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          </div>
+        </div>
+        <div class="job-label">
+          <a class="label-a" href="#">HTML</a>
+          <a class="label-b" href="#">CSS</a>
+          <a class="label-c" href="#">JavaScript</a>
+        </div>
+        <div class="job-posted">Posted 30 mins ago</div>
+      </div>
+
+      <div class="job-card">
+        <div class="job-name">
+          <img class="job-profile" src="{{ url_for('static', filename='/images/tiktok.svg') }}" alt="" />
+          <div class="job-detail">
+            <h4>Tiktok</h4>
+            <h3>Digital Marketing</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          </div>
+        </div>
+        <div class="job-label">
+          <a class="label-a" href="#">HTML</a>
+          <a class="label-b" href="#">CSS</a>
+          <a class="label-c" href="#">JavaScript</a>
+        </div>
+        <div class="job-posted">Posted 45 mins ago</div>
+      </div>
+
+      <div class="job-card">
+        <div class="job-name">
+          <img class="job-profile" src="{{ url_for('static', filename='/images/youtube.svg') }}" alt="" />
+          <div class="job-detail">
+            <h4>Youtube</h4>
+            <h3>UI UX Designer</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          </div>
+        </div>
+        <div class="job-label">
+          <a class="label-a" href="#">HTML</a>
+          <a class="label-b" href="#">CSS</a>
+          <a class="label-c" href="#">JavaScript</a>
+        </div>
+        <div class="job-posted">Posted an hour ago</div>
+      </div>
+
+      <div class="job-card">
+        <div class="job-name">
+          <img class="job-profile" src="{{ url_for('static', filename='/images/amazon.svg') }}" alt="" />
+          <div class="job-detail">
+            <h4>Amazon</h4>
+            <h3>Software Engineer</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          </div>
+        </div>
+        <div class="job-label">
+          <a class="label-a" href="#">HTML</a>
+          <a class="label-b" href="#">CSS</a>
+          <a class="label-c" href="#">JavaScript</a>
+        </div>
+        <div class="job-posted">Posted 2 hours ago</div>
+      </div>
+      <button class="job-more">More list</button>
+    </section>
+
+    <section class="join">
+      <div class="join-detail">
+        <h1 class="section-title">LETS START YOUR NEW JOB WITH US</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse
+          consequatur odit magnam consectetur distinctio? Architecto aliquid
+          commodi at.
+        </p>
+      </div>
+      <button class="join-button">Join now</button>
+    </section>
+
+    <section class="featured" id="companies">
+      <h1 class="section-title">Featured Companies</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur,
+        eligendi aliquam ex saepe enim nam nulla dignissimos nemo quam.
+      </p>
+      <div class="featured-wrapper">
+        <div class="featured-card">
+          <img class="featured-image" src="{{ url_for('static', filename='/images/apple.svg') }}" alt="" />
+          <p>Apple</p>
+          <button class="featured-button">View 5 jobs</button>
+        </div>
+        <div class="featured-card">
+          <img class="featured-image" src="{{ url_for('static', filename='/images/meta.svg') }}" alt="" />
+          <p>Facebook</p>
+          <button class="featured-button">View 2 jobs</button>
+        </div>
+        <div class="featured-card">
+          <img class="featured-image" src="{{ url_for('static', filename='/images/youtube.svg') }}" alt="" />
+          <p>Youtube</p>
+          <button class="featured-button">View 1 jobs</button>
+        </div>
+        <div class="featured-card">
+          <img class="featured-image" src="{{ url_for('static', filename='/images/youtube.svg') }}" alt="" />
+          <p>Amazon</p>
+          <button class="featured-button">View 3 jobs</button>
+        </div>
+        <div class="featured-card">
+          <img class="featured-image" src="{{ url_for('static', filename='/images/tesla.svg') }}" alt="" />
+          <p>Tesla</p>
+          <button class="featured-button">View 2 jobs</button>
+        </div>
+        <div class="featured-card">
+          <img class="featured-image" src="{{ url_for('static', filename='/images/ebay.svg') }}" alt="" />
+          <p>Ebay</p>
+          <button class="featured-button">View 4 jobs</button>
+        </div>
+        <div class="featured-card">
+          <img class="featured-image" src="{{ url_for('static', filename='/images/google.svg') }}" alt="" />
+          <p>Google</p>
+          <button class="featured-button">View 1 jobs</button>
+        </div>
+        <div class="featured-card">
+          <img class="featured-image" src="{{ url_for('static', filename='/images/tiktok.svg') }}" alt="" />
+          <p>Tiktok</p>
+          <button class="featured-button">View 2 jobs</button>
+        </div>
+        <div class="featured-card">
+          <img class="featured-image" src="{{ url_for('static', filename='/images/pinterest.svg') }}" alt="" />
+          <p>Pinterest</p>
+          <button class="featured-button">View 5 jobs</button>
+        </div>
+        <div class="featured-card">
+          <img class="featured-image" src="{{ url_for('static', filename='/images/rockstar.svg') }}" alt="" />
+          <p>Rockstar</p>
+          <button class="featured-button">View 3 jobs</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="testimoni" id="testimoni">
+      <h1 class="section-title">Testimonial</h1>
+      <p>Lets see what our clients say about us</p>
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <i class="fas fa-quote-left"></i>
+            <h3>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum
+              quis dolore accusantium? Magnam dolores eum praesentium, facere.
+            </h3>
+            <div class="testimoni-pic">
+              <img src="{{ url_for('static', filename='/images/profile-1.jpg') }}" alt="" />
+              <p>John Smith</p>
+              <span>Business Development</span>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <i class="fas fa-quote-left"></i>
+            <h3>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum
+              quis dolore accusantium? Magnam dolores eum praesentium, facere.
+            </h3>
+            <div class="testimoni-pic">
+              <img src="{{ url_for('static', filename='/images/profile-2.jpg') }}" alt="" />
+              <p>Mark Antony</p>
+              <span>Human Resources</span>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <i class="fas fa-quote-left"></i>
+            <h3>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum
+              quis dolore accusantium? Magnam dolores eum praesentium, facere.
+            </h3>
+            <div class="testimoni-pic">
+              <img src="{{ url_for('static', filename='/images/profile-3.jpg') }}" alt="" />
+              <p>Walter White</p>
+              <span>Product Management</span>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <i class="fas fa-quote-left"></i>
+            <h3>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum
+              quis dolore accusantium? Magnam dolores eum praesentium, facere.
+            </h3>
+            <div class="testimoni-pic">
+              <img src="{{ url_for('static', filename='/images/profile-4.jpg') }}" alt="" />
+              <p>Jesse Pinkman</p>
+              <span>Marketing Officer</span>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <i class="fas fa-quote-left"></i>
+            <h3>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum
+              quis dolore accusantium? Magnam dolores eum praesentium, facere.
+            </h3>
+            <div class="testimoni-pic">
+              <img src="{{ url_for('static', filename='/images/profile-5.jpg') }}" alt="" />
+              <p>Saul Goodman</p>
+              <span>Human Resources</span>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+
+    <section class="blog" id="blog">
+        <h1 class="section-title">Career Advices</h1>
+        <p>Learn more career tips from company's recruiter</p>
+        <div class="blog-wrapper">
+            <div class="blog-card">
+                <img src="{{ url_for('static', filename='/images/blog-1.jpg') }}" alt="" class="blog-image">
+                <div class="blog-detail">
+                    <span>13 Jan 2021</span>
+                    <h4>how to enjoy your work</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    <hr class="divider">
+                    <a href="https://www.indeed.com/career-advice/career-development/how-to-enjoy-work" target="_blank" class="blog-more">Read More</a>
+                </div>
+            </div>
+            <div class="blog-card">
+                <img src="{{ url_for('static', filename='/images/blog-2.jpg') }}" alt="" class="blog-image">
+                <div class="blog-detail">
+                    <span>2 Apr 2022</span>
+                    <h4>10 tips for building your resume</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    <hr class="divider">
+                    <a target="_blank" href="https://www.waldenu.edu/programs/resource/10-tips-to-transform-your-resume-from-good-to-great" class="blog-more">Read More</a>
+                </div>
+            </div>
+            <div class="blog-card">
+                <img src="{{ url_for('static', filename='/images/blog-3.jpg') }}" alt="" class="blog-image">
+                <div class="blog-detail">
+                    <span>13 Aug 2023</span>
+                    <h4>How to work efficiently</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    <hr class="divider">
+                    <a target="_blank" href="https://www.bamboohr.com/blog/tips-increasing-workplace-efficiency" class="blog-more">Read More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="footer-wrapper">
+            <h3>JOBDOOR</h3>
+            <p>Website by SANJAYKUMAR S
+            </p>
+            <div class="social-media">
+                <a href="https://www.linkedin.com/in/sanjaykumar-s-aa235824a/" target="_blank">
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://github.com/Sanjaykumar-Sundaramoorthy" target="_blank">
+                  <i class="fab fa-github"></i>
+                </a>
+            </div>
+        </div>
+        <div class="footer-wrapper">
+            <h4>Explore</h4>
+            <a href="https://www.forbesindia.com/article/explainers/top-10-largest-companies-world-market-cap/86341/1" target="_blank">Top Companies</a>
+            <a href="https://en.wikipedia.org/wiki/Terms_of_service" target="_blank">Terms of Services</a>
+            <a href="https://www.cfnc.org/news/how-to-choose-a-career/" target="_blank">Careers</a>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+  </body>
+</html>
